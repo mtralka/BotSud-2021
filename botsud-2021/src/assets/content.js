@@ -1,4 +1,4 @@
-content = {
+const content = {
     basicInfo: {
         title:
             "Climb every mountain (and take a photo): social media photos and plant conservation in the Northern Ticino Alps.",
