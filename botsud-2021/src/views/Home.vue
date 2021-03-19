@@ -3,11 +3,16 @@
     <v-row class="text-center">
       <v-col col="auto">
         <Header :basicInfo="content.basicInfo" />
-        <Intro :introduction="content.introduction" />
-        <Methods :method="content.method" />
-        <Results :results="content.results" />
-        <Conclusion :conclusion="content.conclusion" />
-        <Appendix :appendix="content.appendix" />
+        <Intro id="introduction" :introduction="content.introduction" />
+        <Methods id="methods" :method="content.method" />
+        <Results id="results" :results="content.results" />
+        <Conclusion id="conclusion" :conclusion="content.conclusion" />
+        <Literature id="literature" :literature="content.literature" />
+        <Appendix
+          id="appendix"
+          :appendix="content.appendix"
+          v-if="content.appendix.body"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -21,7 +26,7 @@ import Results from "../components/Results";
 import Conclusion from "../components/Conclusion";
 import content from "../assets/content";
 import Appendix from "../components/Appendix";
-import NavDrawer from "../components/NavDrawer";
+import Literature from "../components/Literature";
 
 export default {
   name: "Home",
@@ -32,7 +37,7 @@ export default {
     Results,
     Conclusion,
     Appendix,
-    NavDrawer,
+    Literature,
   },
 
   data: () => ({

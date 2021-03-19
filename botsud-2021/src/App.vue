@@ -24,7 +24,7 @@
     </v-app-bar>
     <NavDrawer :content="content" v-if="isHome()" />
     <v-main>
-      <router-view />
+      <router-view style="scroll-behavior: smooth" />
     </v-main>
     <v-footer app padless absolute>
       <v-card flat tile width="100vw" class="primary text-center">

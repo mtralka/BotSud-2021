@@ -21,7 +21,7 @@
                     :src="require(`@/assets/${item.image}`)"
                     :alt="item.imageCaption"
                     contain
-                    max-width="200"
+                    max-width="400"
                     class="mx-auto py-4"
                   ></v-img>
                   <figcaption style="display: none">

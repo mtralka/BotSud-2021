@@ -1,13 +1,13 @@
 <template>
   <v-navigation-drawer permanent expand-on-hover app floating clipped>
     <v-list nav dense>
-      <router-link to="/">
-        <v-list-item
-          link
-          v-for="(section, idx) in sections"
-          :key="idx"
-          style="text-decoration: none"
-        >
+      <router-link
+        :to="`#${section}`"
+        v-for="(section, idx) in sections"
+        :key="idx"
+        @click.native="scrollToId(`#${section}`)"
+      >
+        <v-list-item link style="text-decoration: none">
           <v-list-item-icon>
             <span class="text-h6 font-weight-bold"
               >{{ section.charAt(0).toUpperCase() }}.</span
@@ -22,8 +22,9 @@
     <v-list>
       <v-list-item v-for="(author, idx) in authors" :key="idx" class="px-2">
         <v-list-item-avatar>
-          <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+          <v-icon>{{ "mdi-face-profile" }} </v-icon>
         </v-list-item-avatar>
+
         <v-list-item-content two-lined>
           <v-list-item-title class="title primary--text">
             {{ author.name }}
@@ -49,6 +50,11 @@ export default {
     },
     sections() {
       return this.content.basicInfo.sections;
+    },
+  },
+  methods: {
+    scrollToId(id) {
+      document.getElementById(id).scrollIntoView();
     },
   },
 };

@@ -5,8 +5,14 @@
         {{ introduction.title }}
       </v-card-title>
       <v-card-text class="text-body-1 text-justify">
-        {{ introduction.body }}</v-card-text
-      >
+        {{ introduction.body }}
+
+        <v-list-item v-for="(item, idx) in introduction.objectives" :key="idx">
+          <v-list-item-content>
+            <v-list-item-title> {{ item }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card-text>
     </v-card>
   </v-col>
 </template>

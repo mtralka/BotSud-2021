@@ -4,7 +4,7 @@
       <v-card-title class="text-left text-h4">
         {{ conclusion.title }}
       </v-card-title>
-      <v-card-text class="text-body-1 text-justify">
+      <v-card-text v-html="conclusion.body" class="text-body-1 text-justify">
         {{ conclusion.body }}</v-card-text
       >
     </v-card>
