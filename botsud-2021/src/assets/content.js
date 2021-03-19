@@ -20,7 +20,7 @@ content = {
                 email: "l.pifferinicarter@student.fus.edu",
             },
         ],
-        sections: ['introduction', 'method', 'results', 'conclusion', 'literature', 'appendix']
+        sections: ['introduction', 'method', 'results', 'conclusion', 'literature']
     },
     introduction: {
         title: "Introduction",
