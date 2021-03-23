@@ -2,16 +2,32 @@
   <v-container>
     <v-row class="text-center">
       <v-col col="auto">
-        <Header :basicInfo="content.basicInfo" />
-        <Intro id="introduction" :introduction="content.introduction" />
-        <Methods id="methods" :method="content.method" />
-        <Results id="results" :results="content.results" />
-        <Conclusion id="conclusion" :conclusion="content.conclusion" />
-        <Literature id="literature" :literature="content.literature" />
+        <Header v-if="content.basicInfo" :basicInfo="content.basicInfo" />
+        <Intro
+          id="introduction"
+          v-if="content.introduction"
+          :introduction="content.introduction"
+        />
+        <Methods id="methods" v-if="content.method" :method="content.method" />
+        <Results
+          id="results"
+          v-if="content.results"
+          :results="content.results"
+        />
+        <Conclusion
+          id="conclusion"
+          v-if="content.conclusion"
+          :conclusion="content.conclusion"
+        />
+        <Literature
+          id="literature"
+          v-if="content.literature"
+          :literature="content.literature"
+        />
         <Appendix
           id="appendix"
           :appendix="content.appendix"
-          v-if="content.appendix.body"
+          v-if="content.appendix"
         />
       </v-col>
     </v-row>

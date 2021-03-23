@@ -1,3 +1,4 @@
+
 const content = {
     basicInfo: {
         title:
@@ -20,7 +21,7 @@ const content = {
                 email: "l.pifferinicarter@student.fus.edu",
             },
         ],
-        sections: ['introduction', 'method', 'results', 'conclusion', 'literature']
+        sections: ['introduction', 'method', 'results', 'conclusion', 'literature', 'appendix']
     },
     introduction: {
         title: "Introduction",
@@ -142,7 +143,51 @@ const content = {
     },
     appendix: {
         title: "Appendix",
-        body: null,
+        headers: [
+            {
+                text: "Plant Species", value: "name", align: "start",
+                class: "text-weight-bold",
+            },
+            { text: "Percentage", value: "percent" }
+        ],
+        items: [
+            { name: "Larix decidua", percent: "26.21" },
+            { name: "Epilobium angustifolium", percent: "9.71" },
+            { name: "Vaccinium spp.", percent: "5.83" },
+            { name: "Eriophorum spp.", percent: "4.85" },
+            { name: "Adenostyles spp.", percent: "3.88" },
+            { name: "Achillea millefolium", percent: "2.91" },
+            { name: "Alnus viridis", percent: "2.91" },
+            { name: "Campanula spp.", percent: "2.91" },
+            { name: "Eriophorum vaginatum", percent: "2.91" },
+            { name: "Leucanthemum spp.", percent: "2.91" },
+            { name: "Rhododendron hirsutum", percent: "2.91" },
+            { name: "Rumex alpinus", percent: "2.91" },
+            { name: "Adenostyles alliariae", percent: "1.94" },
+            { name: "Cirsium spinosissimum", percent: "1.94" },
+            { name: "Peucedanum ostruthium", percent: "1.94" },
+            { name: "Rhododendron spp.", percent: "1.94" },
+            { name: "Sorbus aucuparia", percent: "1.94" },
+            { name: "Alchemilla spp.", percent: "0.97" },
+            { name: "Betula pendula", percent: "0.97" },
+            { name: "Carex spp.", percent: "0.97" },
+            { name: "Corylus avellana", percent: "0.97" },
+            { name: "Crocus albiflorus", percent: "0.97" },
+            { name: "Geranium sylvaticum", percent: "0.97" },
+            { name: "Hieracium spp.", percent: "0.97" },
+            { name: "Juniperus communis", percent: "0.97" },
+            { name: "Leucanthemum vulgare", percent: "0.97" },
+            { name: "Pinus cembra", percent: "0.97" },
+            { name: "Pulsatilla vernalis", percent: "0.97" },
+            { name: "Pulsatilla alpina (subsp. apifolia)", percent: "0.97" },
+            { name: "Rumex spp.", percent: "0.97" },
+            { name: "Silene acaulis", percent: "0.97" },
+            { name: "Thymus spp.", percent: "0.97" },
+            { name: "Trifolium pratense", percent: "0.97" },
+            { name: "Trifolium monatum", percent: "0.97" },
+            { name: "Trifolium badium", percent: "0.97" },
+            { name: "Vaccinium myrtillus", percent: "0.97" },
+        ]
     }
 }
 
